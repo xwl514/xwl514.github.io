@@ -19,7 +19,7 @@ redirect_from:
 
 My research field is Process System Engineering(PSE). 
 
-I have published 1 paper with total <a href='https://scholar.google.com/citations?user=2Ruek5kAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>.
+I have published 2 paper with total <a href='https://scholar.google.com/citations?user=2Ruek5kAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>.
 
 
 
@@ -42,6 +42,9 @@ I have published 1 paper with total <a href='https://scholar.google.com/citation
 
 </div>
 </div>
+
+- [Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
+  - Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
 
 <span class='anchor' id='-award'></span>
 
