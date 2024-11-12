@@ -1,16 +1,16 @@
 # main links links
 main:
   - title: "Intro"
-    url: "/zh-cn/#about-me"
+    url: "#about-me"
 
   - title: "Education"
-    url: "/zh-cn/#-edu"
+    url: "#-edu"
 
   - title: "Publications"
-    url: "/zh-cn/#-pub"
+    url: "#-pub"
 
   - title: "Awards"
-    url: "/zh-cn/#-award"
+    url: "#-award"
 
   - title: "Internships"
-    url: "/zh-cn/#-intern"
+    url: "#-intern"
