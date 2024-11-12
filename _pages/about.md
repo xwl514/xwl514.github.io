@@ -37,11 +37,8 @@ I have published 1 paper with total <a href='https://scholar.google.com/citation
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ESCAPE34&PSE24</div><img src='images/article1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-
 - [An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
-
-
-**Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
+  - **Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
 
 </div>
 </div>
