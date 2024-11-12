@@ -17,7 +17,7 @@ print(author)
 shieldio_data = {
   "schemaVersion": 1,
   "label": "citations",
-  "message": f"{author['citedby']}",
+  "message": f"{sum(list(author['cites_per_year'].values()))}",
 }
 with open(f'results/gs_data_shieldsio.json', 'w') as outfile:
     json.dump(shieldio_data, outfile, ensure_ascii=False)
