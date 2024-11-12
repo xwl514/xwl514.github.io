@@ -13,7 +13,7 @@ print(json.dumps(author, indent=2))
 os.makedirs('results', exist_ok=True)
 with open(f'results/gs_data.json', 'w') as outfile:
     json.dump(author, outfile, ensure_ascii=False)
-
+print(author)
 shieldio_data = {
   "schemaVersion": 1,
   "label": "citations",
