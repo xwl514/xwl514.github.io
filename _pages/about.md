@@ -27,7 +27,7 @@ I have published 2 paper with total <a href='https://scholar.google.com/citation
 
 # 📖 Educations
 - *2023.08 - 2024.11 (now)*, Ph.D. in Chemical Engineering, Tsinghua University, Beijing, China.
-- *2019.09 - 2023.06*, Bachelor of Science in Chemical Engineering, Tsinghua University, Beijing, China.
+- *2019.09 - 2023.06*, Bachelor of Chemical Engineering, Tsinghua University, Beijing, China.
 
 
 <span class='anchor' id='-pub'></span>
