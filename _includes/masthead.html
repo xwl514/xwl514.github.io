@@ -3,7 +3,7 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links">
-          <li><div style="width: 270px;"></div></li> <!-- Adds a space before the first link -->
+          <!--<li><div style="width: 270px;"></div></li>  Adds a space before the first link --> 
           {% for link in site.data.navigation.main %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
