@@ -61,7 +61,7 @@ I have published 2 paper with total <a href='https://scholar.google.com/citation
 
 <span class='anchor' id='-award'></span>
 
-# 🎖 Honors and Awards
+# 🏅 Honors and Awards
 - *TODO* 🤔
 
 
