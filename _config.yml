@@ -24,7 +24,7 @@ author:
   name             : "Wenle Xu"
   avatar           : "images/nailong.gif"
   bio              : "Tsinghua University"
-  location         : "Beijing"
+  location         : "Beijing, China"
   employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=2Ruek5kAAAAJ"
@@ -125,7 +125,7 @@ defaults:
       type: pages
     values:
       layout: default
-      author_profile: true
+      author_profile: false
 
 
 # Sass/SCSS
