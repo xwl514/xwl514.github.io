@@ -66,7 +66,9 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 
 # 🏅 Honors and Awards
 
- *TODO* 🤔
+- Tsinghua University Academic Excellence Scholarship (2020-2021)
+- Tsinghua University Academic Excellence Scholarship (2021-2022)
+- Tsinghua University Outstanding Undergraduate Thesis (Top 5 out of all department graduates, 2023)
 
 
 <span class='anchor' id='-intern'></span>
