@@ -34,7 +34,8 @@ jobs:
 
       - name: Run script
         run: |
-          cd ./google_scholar_crawler
+          ls -a
+          cd google_scholar_crawler
           python3 main.py
           cd ./results
           git init
