@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x' # 或者指定一个明确的版本，例如 '3.9', '3.10' (Ubuntu 22.04 默认 Python 3.10)
+          python-version: '3.10' # 或者指定一个明确的版本，例如 '3.9', '3.10' (Ubuntu 22.04 默认 Python 3.10)
           cache: 'pip'
 
       - name: Install system dependencies (if still needed)
