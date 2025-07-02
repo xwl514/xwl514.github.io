@@ -25,9 +25,9 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 
 # 📖 Education
 
- [![Tsinghua University][thu-logo]](https://www.tsinghua.edu.cn/) *2023.08 - Now*, Ph.D. in Chemical Engineering, Tsinghua University, Beijing, China.
+ [![Tsinghua University][thu-logo]](https://scholars.chemeng.tsinghua.edu.cn/RESEARCHS/system/default.htm) *2023.08 - Now*, Ph.D. Student in Chemical Engineering, Tsinghua University, Beijing, China.
 
- [![Tsinghua University][thu-logo]](https://www.tsinghua.edu.cn/) *2019.09 - 2023.06*, Bachelor of Chemical Engineering, Tsinghua University, Beijing, China.
+ [![Tsinghua University][thu-logo]](https://www.chemeng.tsinghua.edu.cn/) *2019.09 - 2023.06*, Bachelor of Chemical Engineering, Tsinghua University, Beijing, China.
 
 
 
@@ -36,21 +36,35 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 
 # 📝 Publications 
 
- [An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
+ [[2025.06] MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
   
-  **Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
+**Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo
   <details>
     <summary>Abstract</summary>
-    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within droplets. Among all methods employed for droplet characterization within microchannels, microscopic imaging stands out for its capacity to capture ample information. However, the processing of images and videos still predominantly relied on massive manual works, which falls short of meeting the demands for high-throughput analysis. To address this problem, this paper proposes an efficient approach based on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos in microchannels. This approach initially segments droplets in microscopic images and consequently associate the identical droplets and recognize the coalescence processes across consecutive frames. Finally, further analysis of these data can yield critical statistics of the droplet coalescence process, such as coalescence probability and coalescence time. This approach enables automated and efficient analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery and exploration of droplet coalescence patterns in microfluidics.
-    
+    Microdispersion technology is crucial for a variety of applications in both the chemical and biomedical fields. The precise and rapid characterization of microdroplets and microbubbles is essential for research as well as for optimizing and controlling industrial processes. Traditional methods often rely on time-consuming manual analysis. Although some deep learning-based computer vision methods have been proposed for automated identification and characterization, these approaches often rely on supervised learning, which requires labeled data for model training. This dependency on labeled data can be time-consuming and expensive, especially when working with large and complex datasets. To address these challenges, we propose MicroFlowSAM, an innovative, motion-prompted, annotation-free, and training-free instance segmentation approach. By utilizing motion of microdroplets and microbubbles as prompts, our method directs large-scale vision models to perform accurate instance segmentation without the need for annotated data or model training. This approach eliminates the need for human intervention in data labeling and reduces computational costs, significantly streamlining the data analysis process. We demonstrate the effectiveness of MicroFlowSAM across 12 diverse datasets, achieving outstanding segmentation results that are competitive with traditional methods. This novel approach not only accelerates the analysis process but also establishes a foundation for efficient process control and optimization in microfluidic applications. MicroFlowSAM represents a breakthrough in reducing the complexities and resource demands of instance segmentation, enabling faster insights and advancements in the microdispersion field.
+
     <div style="text-align: center;">
-      <img src="./images/coalescence.png" alt="coalescence" style="width: 80%;"/>
+      <img src="./images/cjche-0.jpg" alt="MicroFlowSAM" style="width: 80%;"/>
     </div>
   </details>
 
-<br>
+  <br>
 
- [Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
+   [[2025.06] Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process](https://doi.org/10.69997/sct.173697)
+  
+**Wenle Xu**, Baohua Chen, Tong Qiu
+  <details>
+    <summary>Abstract</summary>
+    Fluid catalytic cracking is a crucial process in the refining industry, capable of converting lower-quality feedstocks into higher-value products. Due to the variability in feedstock properties and fluctuations in product market prices, timely adjustment and optimization of the FCC unit are essential. In this context, data-driven models have garnered increasing attention for their capacity to handle the complex, nonlinear reactions involved in the FCC process. However, on account of the limited operating range of the plants and the black-box nature of data-driven models, relying solely on these models for optimization may lead to contradictory decisions in optimization processes. To address these challenges, we integrate gradient information of product yields with respect to key variables derived from the mechanistic model Petro-SIM, into the training process of data-driven models. To mitigate the high computational demands of the Petro-SIM model, we propose the use of active learning methods for efficient sampling and thereby constructing a surrogate model. The results demonstrate that the active learning approach reduces the required sampling size by 25%. More importantly, the data-driven model trained with gradient information improves the accuracy of trend direction prediction by 34.6%, significantly enhancing its effectiveness in supporting the optimization process.
+
+    <div style="text-align: center;">
+      <img src="./images/escape35.svg" alt="ESCAPE35" style="width: 80%;"/>
+    </div>
+  </details>
+
+  <br>
+  
+   [[2024.11] Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
   
   Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
   <details>
@@ -64,18 +78,17 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 
 <br>
 
- [MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
+  [[2024.06] An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
   
-**Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo
+  **Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
   <details>
     <summary>Abstract</summary>
-    Microdispersion technology is crucial for a variety of applications in both the chemical and biomedical fields. The precise and rapid characterization of microdroplets and microbubbles is essential for research as well as for optimizing and controlling industrial processes. Traditional methods often rely on time-consuming manual analysis. Although some deep learning-based computer vision methods have been proposed for automated identification and characterization, these approaches often rely on supervised learning, which requires labeled data for model training. This dependency on labeled data can be time-consuming and expensive, especially when working with large and complex datasets. To address these challenges, we propose MicroFlowSAM, an innovative, motion-prompted, annotation-free, and training-free instance segmentation approach. By utilizing motion of microdroplets and microbubbles as prompts, our method directs large-scale vision models to perform accurate instance segmentation without the need for annotated data or model training. This approach eliminates the need for human intervention in data labeling and reduces computational costs, significantly streamlining the data analysis process. We demonstrate the effectiveness of MicroFlowSAM across 12 diverse datasets, achieving outstanding segmentation results that are competitive with traditional methods. This novel approach not only accelerates the analysis process but also establishes a foundation for efficient process control and optimization in microfluidic applications. MicroFlowSAM represents a breakthrough in reducing the complexities and resource demands of instance segmentation, enabling faster insights and advancements in the microdispersion field.
-
+    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within droplets. Among all methods employed for droplet characterization within microchannels, microscopic imaging stands out for its capacity to capture ample information. However, the processing of images and videos still predominantly relied on massive manual works, which falls short of meeting the demands for high-throughput analysis. To address this problem, this paper proposes an efficient approach based on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos in microchannels. This approach initially segments droplets in microscopic images and consequently associate the identical droplets and recognize the coalescence processes across consecutive frames. Finally, further analysis of these data can yield critical statistics of the droplet coalescence process, such as coalescence probability and coalescence time. This approach enables automated and efficient analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery and exploration of droplet coalescence patterns in microfluidics.
+    
     <div style="text-align: center;">
-      <img src="./images/cjche-0.jpg" alt="MicroFlowSAM" style="width: 80%;"/>
+      <img src="./images/coalescence.png" alt="coalescence" style="width: 80%;"/>
     </div>
   </details>
-  
 <span class='anchor' id='-award'></span>
 
 # 🏅 Honors and Awards
@@ -84,9 +97,6 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 - Tsinghua University Outstanding Undergraduate Thesis (Top 5 out of all department graduates, 2023)
 - Tsinghua University Academic Excellence Scholarship (2021-2022)
 - Tsinghua University Academic Excellence Scholarship (2020-2021)
-
-
-
 
 <span class='anchor' id='-intern'></span>
 
