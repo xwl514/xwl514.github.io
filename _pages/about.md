@@ -62,6 +62,20 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
     </div>
   </details>
 
+<br>
+
+ [MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
+  
+**Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo
+  <details>
+    <summary>Abstract</summary>
+    Microdispersion technology is crucial for a variety of applications in both the chemical and biomedical fields. The precise and rapid characterization of microdroplets and microbubbles is essential for research as well as for optimizing and controlling industrial processes. Traditional methods often rely on time-consuming manual analysis. Although some deep learning-based computer vision methods have been proposed for automated identification and characterization, these approaches often rely on supervised learning, which requires labeled data for model training. This dependency on labeled data can be time-consuming and expensive, especially when working with large and complex datasets. To address these challenges, we propose MicroFlowSAM, an innovative, motion-prompted, annotation-free, and training-free instance segmentation approach. By utilizing motion of microdroplets and microbubbles as prompts, our method directs large-scale vision models to perform accurate instance segmentation without the need for annotated data or model training. This approach eliminates the need for human intervention in data labeling and reduces computational costs, significantly streamlining the data analysis process. We demonstrate the effectiveness of MicroFlowSAM across 12 diverse datasets, achieving outstanding segmentation results that are competitive with traditional methods. This novel approach not only accelerates the analysis process but also establishes a foundation for efficient process control and optimization in microfluidic applications. MicroFlowSAM represents a breakthrough in reducing the complexities and resource demands of instance segmentation, enabling faster insights and advancements in the microdispersion field.
+
+    <div style="text-align: center;">
+      <img src="./images/cjche-0.jpg" alt="MicroFlowSAM" style="width: 80%;"/>
+    </div>
+  </details>
+  
 <span class='anchor' id='-award'></span>
 
 # 🏅 Honors and Awards
