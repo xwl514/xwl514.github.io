@@ -36,7 +36,7 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 
 # 📝 Publications 
 
- [[2025.06] MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
+[[2025.06] MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
   
 **Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo
   <details>
@@ -48,9 +48,9 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
     </div>
   </details>
 
-  <br>
+<br>
 
-   [[2025.06] Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process](https://doi.org/10.69997/sct.173697)
+[[2025.06] Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process](https://doi.org/10.69997/sct.173697)
   
 **Wenle Xu**, Baohua Chen, Tong Qiu
   <details>
@@ -61,12 +61,42 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
       <img src="./images/escape35.svg" alt="ESCAPE35" style="width: 80%;"/>
     </div>
   </details>
+  
+<br>
 
-  <br>
+[[2024.06] An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
   
-   [[2024.11] Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
+**Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
+  <details>
+    <summary>Abstract</summary>
+    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within droplets. Among all methods employed for droplet characterization within microchannels, microscopic imaging stands out for its capacity to capture ample information. However, the processing of images and videos still predominantly relied on massive manual works, which falls short of meeting the demands for high-throughput analysis. To address this problem, this paper proposes an efficient approach based on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos in microchannels. This approach initially segments droplets in microscopic images and consequently associate the identical droplets and recognize the coalescence processes across consecutive frames. Finally, further analysis of these data can yield critical statistics of the droplet coalescence process, such as coalescence probability and coalescence time. This approach enables automated and efficient analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery and exploration of droplet coalescence patterns in microfluidics.
+    
+    <div style="text-align: center;">
+      <img src="./images/coalescence.png" alt="coalescence" style="width: 80%;"/>
+    </div>
+  </details>
   
-  Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
+<br>
+
+[[2025.07] Gas–liquid mass transfer enhancement by simply modifying a T-junction microchannel](https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70017)
+  
+Lin Sheng, **Wenle Xu**, Zhixuan Chen, Jian Deng, Tong Qiu, Guangsheng Luo
+  <details>
+    <summary>Abstract</summary>
+    Improving the gas–liquid mass transfer rate in microdevices is essential for enhancing chemical reaction performance, but it has traditionally required high energy input or complex device fabrication. This study reports superior gas–liquid mass transfer performance in a newly designed T-junction microchannel with a simple structure. Compared with the mass transfer contribution of approximately 30% in a conventional T-junction microchannel, the contribution of the bubble generation stage in the modified device ranges from 50%–80%. The parameters of bubble generation frequency and liquid slug length are studied to identify the mechanism underlying the enhanced performance. Importantly, through a self-developed image recognition system with high temporal and spatial resolution, this study reveals that the liquid-side mass transfer coefficient not only depends on operation parameters but also relies on bubble residence time. Finally, considering channel length and mass transfer time, a new semi-empirical model is developed.
+    
+    <div style="text-align: center;">
+      <img src="./images/aiche202507.jpg" alt="coalescence" style="width: 80%;"/>
+    </div>
+  </details>
+
+
+<br>
+
+
+[[2024.11] Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
+  
+Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
   <details>
     <summary>Abstract</summary>
     Fluid Catalytic Cracking (FCC) is one of the most important conversion processes in oil refineries, widely used to convert high-boiling, high-molecular-weight hydrocarbon components from crude oil into more valuable products like gasoline and diesel. Advanced simulation and optimization technologies are critical for improving the operational efficiency and economic performance of the FCC process. First-principles-based simulators rely on parameter estimation and are computationally intensive, making them unsuitable for online optimization. In recent years, with the development of deep learning, data-driven models have made significant progress in FCC modeling. However, due to their black-box nature and difficulty with extrapolation, they are rarely used for optimization. To bridge this gap, we propose an integrated framework that combines hybrid modeling and surrogate model-based optimization. This approach combines plant and simulation data to train a multi-task learning prediction model, which then serves as a surrogate for operational optimization. Validated on a large-scale FCC unit in southern China, the model predicts product yields with an error margin of under 4.84% for all products. Following optimization, yields of LNG, gasoline, and diesel rose by an average of 0.10 wt%, 1.58 wt%, and 1.05 wt%, respectively, resulting in a 3.67% increase in product revenues. This highlights the substantial potential of this framework for industrial applications.
@@ -76,19 +106,7 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
     </div>
   </details>
 
-<br>
 
-  [[2024.06] An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
-  
-  **Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
-  <details>
-    <summary>Abstract</summary>
-    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within droplets. Among all methods employed for droplet characterization within microchannels, microscopic imaging stands out for its capacity to capture ample information. However, the processing of images and videos still predominantly relied on massive manual works, which falls short of meeting the demands for high-throughput analysis. To address this problem, this paper proposes an efficient approach based on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos in microchannels. This approach initially segments droplets in microscopic images and consequently associate the identical droplets and recognize the coalescence processes across consecutive frames. Finally, further analysis of these data can yield critical statistics of the droplet coalescence process, such as coalescence probability and coalescence time. This approach enables automated and efficient analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery and exploration of droplet coalescence patterns in microfluidics.
-    
-    <div style="text-align: center;">
-      <img src="./images/coalescence.png" alt="coalescence" style="width: 80%;"/>
-    </div>
-  </details>
 <span class='anchor' id='-award'></span>
 
 # 🏅 Honors and Awards
