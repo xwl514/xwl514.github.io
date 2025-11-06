@@ -27,7 +27,7 @@
             },
             "filled": false,
             "author_pub_id": "2Ruek5kAAAAJ:d1gkVwhDpl0C",
-            "num_citations": 0
+            "num_citations": 2
         },
         "2Ruek5kAAAAJ:u-x6o8ySG0sC": {
             "container_type": "Publication",
@@ -61,14 +61,26 @@
             "filled": false,
             "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC_2",
             "num_citations": 0
+        },
+        "2Ruek5kAAAAJ:u-x6o8ySG0sC_3": {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels",
+                "pub_year": "2025"
+            },
+            "filled": false,
+            "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC_3",
+            "num_citations": 0
         }
+        
     },
     "hindex": 1,
     "hindex5y": 1,
     "i10index": 0,
     "i10index5y": 0,
     "cites_per_year": {
-        "2025": 1
+        "2025": 3
     },
-    "updated": "2025-06-06 12:26:04.040738"
+    "updated": "2025-10-06 12:26:04.040738"
 }
