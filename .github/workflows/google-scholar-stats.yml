@@ -36,12 +36,14 @@ jobs:
           python -m unittest discover -s google_scholar_crawler -p 'test_*.py'
           node google_scholar_crawler/test_frontend.cjs
       - name: Fetch citation data
+        continue-on-error: true
         run: python google_scholar_crawler/main.py
         env:
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           HTTPS_PROXY: ${{ secrets.GOOGLE_SCHOLAR_PROXY }}
       - name: Publish complete results
+        if: ${{ hashFiles('google_scholar_crawler/results/gs_data.json', 'google_scholar_crawler/results/gs_data_shieldsio.json') != '' }}
         shell: bash
         run: |
           set -euo pipefail
