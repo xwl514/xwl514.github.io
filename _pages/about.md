@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-My research field is Process System Engineering(PSE) <a href='https://scholar.google.com/citations?user=2Ruek5kAAAAJ'><img src="https://img.shields.io/badge/5-9cf?label=%F0%9F%93%9Dpapers&labelColor=white"></a> 
+My research field is Process System Engineering(PSE) <a href='#-pub'><img src="https://img.shields.io/badge/{{ site.data.publications | size }}-9cf?label=%F0%9F%93%9Dpapers&labelColor=white" alt="{{ site.data.publications | size }} publications"></a>
 <a href='https://scholar.google.com/citations?user=2Ruek5kAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>.
 
 
@@ -34,89 +34,24 @@ My research field is Process System Engineering(PSE) <a href='https://scholar.go
 <span class='anchor' id='-pub'></span>
 
 
-# 📝 Publications 
+# 📝 Publications
 
-[[2025.06] MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training](https://www.sciencedirect.com/science/article/pii/S1004954125002381)
-  
-**Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo
-  <details>
-    <summary>Abstract</summary>
-    Microdispersion technology is crucial for a variety of applications in both the chemical and biomedical fields. The precise and rapid characterization of microdroplets and microbubbles is essential for research as well as for optimizing and controlling industrial processes. Traditional methods often rely on time-consuming manual analysis. Although some deep learning-based computer vision methods have been proposed for automated identification and characterization, these approaches often rely on supervised learning, which requires labeled data for model training. This dependency on labeled data can be time-consuming and expensive, especially when working with large and complex datasets. To address these challenges, we propose MicroFlowSAM, an innovative, motion-prompted, annotation-free, and training-free instance segmentation approach. By utilizing motion of microdroplets and microbubbles as prompts, our method directs large-scale vision models to perform accurate instance segmentation without the need for annotated data or model training. This approach eliminates the need for human intervention in data labeling and reduces computational costs, significantly streamlining the data analysis process. We demonstrate the effectiveness of MicroFlowSAM across 12 diverse datasets, achieving outstanding segmentation results that are competitive with traditional methods. This novel approach not only accelerates the analysis process but also establishes a foundation for efficient process control and optimization in microfluidic applications. MicroFlowSAM represents a breakthrough in reducing the complexities and resource demands of instance segmentation, enabling faster insights and advancements in the microdispersion field.
+{% for publication in site.data.publications %}
+[[{{ publication.date }}] {{ publication.title }}]({{ publication.url }})
 
-    <div style="text-align: center;">
-      <img src="./images/cjche-0.jpg" alt="MicroFlowSAM" style="width: 80%;"/>
-    </div>
-  </details>
+{{ publication.authors }}
+<details>
+  <summary>Abstract</summary>
+  {{ publication.abstract | strip | escape }}
+  {% if publication.image %}
+  <div style="text-align: center;">
+    <img src="{{ publication.image | escape }}" alt="{{ publication.image_alt | escape }}" style="width: 80%;" loading="lazy"/>
+  </div>
+  {% endif %}
+</details>
 
-<br>
-
-[[2025.06] Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process](https://doi.org/10.69997/sct.173697)
-  
-**Wenle Xu**, Baohua Chen, Tong Qiu
-  <details>
-    <summary>Abstract</summary>
-    Fluid catalytic cracking is a crucial process in the refining industry, capable of converting lower-quality feedstocks into higher-value products. Due to the variability in feedstock properties and fluctuations in product market prices, timely adjustment and optimization of the FCC unit are essential. In this context, data-driven models have garnered increasing attention for their capacity to handle the complex, nonlinear reactions involved in the FCC process. However, on account of the limited operating range of the plants and the black-box nature of data-driven models, relying solely on these models for optimization may lead to contradictory decisions in optimization processes. To address these challenges, we integrate gradient information of product yields with respect to key variables derived from the mechanistic model Petro-SIM, into the training process of data-driven models. To mitigate the high computational demands of the Petro-SIM model, we propose the use of active learning methods for efficient sampling and thereby constructing a surrogate model. The results demonstrate that the active learning approach reduces the required sampling size by 25%. More importantly, the data-driven model trained with gradient information improves the accuracy of trend direction prediction by 34.6%, significantly enhancing its effectiveness in supporting the optimization process.
-
-    <div style="text-align: center;">
-      <img src="./images/escape35.svg" alt="ESCAPE35" style="width: 80%;"/>
-    </div>
-  </details>
-  
-<br>
-
-[[2024.06] An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms](https://www.sciencedirect.com/science/article/pii/B9780443288241505019)
-  
-**Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu
-  <details>
-    <summary>Abstract</summary>
-    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within droplets. Among all methods employed for droplet characterization within microchannels, microscopic imaging stands out for its capacity to capture ample information. However, the processing of images and videos still predominantly relied on massive manual works, which falls short of meeting the demands for high-throughput analysis. To address this problem, this paper proposes an efficient approach based on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos in microchannels. This approach initially segments droplets in microscopic images and consequently associate the identical droplets and recognize the coalescence processes across consecutive frames. Finally, further analysis of these data can yield critical statistics of the droplet coalescence process, such as coalescence probability and coalescence time. This approach enables automated and efficient analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery and exploration of droplet coalescence patterns in microfluidics.
-    
-    <div style="text-align: center;">
-      <img src="./images/coalescence.png" alt="coalescence" style="width: 80%;"/>
-    </div>
-  </details>
-  
-<br>
-
-[[2025.11] Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels](https://www.sciencedirect.com/science/article/pii/S0009250925017555#f0010)
-  
-Lin Sheng, Junjie Wang, **Wenle Xu**, Jian Deng, Guangsheng Luo
-  <details>
-    <summary>Abstract</summary>
-    Increasing the throughput of the gas–liquid microchannel reactor via the numbering-up method is essential for its commercial application; however, the existing strategy mainly focuses on the conventional T-junction and also requires a strict fluid distributor design. Accordingly, for the high-performance modified T-junction microchannel with a flexible interaction, we proposed a simple numbering-up method between parallel microchannels. The results show that the two-phase flow pattern in parallel microchannels differs based on the sequence of changes in the liquid phase, and a bi-stable flow pattern region is observed for the first time in parallel microchannels, which is named the flow pattern transformation hysteresis behavior. In addition, compared with the gas constant-volumetric-flow-rate mode, the gas constant-pressure injection mode ensures the uniformity of bubble length and liquid slug length in parallel microchannels. Therefore, a reliable gas–liquid microchannel numbering-up strategy based on the microdevice startup mode of liquid filling and the gas injection mode of constant-pressure was proposed. Finally, the applicability of the microchannel numbering-up strategy was verified via the gas absorption in parallel microchannels. This work not only develops a simple numbering-up strategy for the gas–liquid microchannel but also proposes a suitable operation procedure for the numbering-up microdevice.
-  </details>
-
-
-<br>
-
-[[2025.07] Gas–liquid mass transfer enhancement by simply modifying a T-junction microchannel](https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70017)
-  
-Lin Sheng, **Wenle Xu**, Zhixuan Chen, Jian Deng, Tong Qiu, Guangsheng Luo
-  <details>
-    <summary>Abstract</summary>
-    Improving the gas–liquid mass transfer rate in microdevices is essential for enhancing chemical reaction performance, but it has traditionally required high energy input or complex device fabrication. This study reports superior gas–liquid mass transfer performance in a newly designed T-junction microchannel with a simple structure. Compared with the mass transfer contribution of approximately 30% in a conventional T-junction microchannel, the contribution of the bubble generation stage in the modified device ranges from 50%–80%. The parameters of bubble generation frequency and liquid slug length are studied to identify the mechanism underlying the enhanced performance. Importantly, through a self-developed image recognition system with high temporal and spatial resolution, this study reveals that the liquid-side mass transfer coefficient not only depends on operation parameters but also relies on bubble residence time. Finally, considering channel length and mass transfer time, a new semi-empirical model is developed.
-    
-    <div style="text-align: center;">
-      <img src="./images/aiche202507.jpg" alt="coalescence" style="width: 80%;"/>
-    </div>
-  </details>
-
-
-<br>
-
-
-[[2024.11] Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process](https://www.mdpi.com/2227-9717/12/11/2474)
-  
-Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
-  <details>
-    <summary>Abstract</summary>
-    Fluid Catalytic Cracking (FCC) is one of the most important conversion processes in oil refineries, widely used to convert high-boiling, high-molecular-weight hydrocarbon components from crude oil into more valuable products like gasoline and diesel. Advanced simulation and optimization technologies are critical for improving the operational efficiency and economic performance of the FCC process. First-principles-based simulators rely on parameter estimation and are computationally intensive, making them unsuitable for online optimization. In recent years, with the development of deep learning, data-driven models have made significant progress in FCC modeling. However, due to their black-box nature and difficulty with extrapolation, they are rarely used for optimization. To bridge this gap, we propose an integrated framework that combines hybrid modeling and surrogate model-based optimization. This approach combines plant and simulation data to train a multi-task learning prediction model, which then serves as a surrogate for operational optimization. Validated on a large-scale FCC unit in southern China, the model predicts product yields with an error margin of under 4.84% for all products. Following optimization, yields of LNG, gasoline, and diesel rose by an average of 0.10 wt%, 1.58 wt%, and 1.05 wt%, respectively, resulting in a 3.67% increase in product revenues. This highlights the substantial potential of this framework for industrial applications.
-
-    <div style="text-align: center;">
-      <img src="./images/processes-12-02474-g001.png" alt="FCC" style="width: 80%;"/>
-    </div>
-  </details>
-
+{% unless forloop.last %}<br>{% endunless %}
+{% endfor %}
 
 <span class='anchor' id='-award'></span>
 

@@ -1,3 +1,7 @@
 _site/
 push.sh
 .DS_Store
+
+# Keep local paper documents and archives out of GitHub.
+*.[pP][dD][fF]
+*.[zZ][iI][pP]

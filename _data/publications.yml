@@ -1,0 +1,235 @@
+# Publications in display order: first-author papers, then coauthored papers.
+# Dates use the online publication month. The homepage count comes from this list.
+# Keep full-text PDFs outside the repository; link to the publisher instead.
+
+- date: '2026.09'
+  title: 'Empowering Organoid-based Drug Screening: A Morphologically-consistent and Data-efficient Instance
+    Segmentation Framework'
+  url: https://doi.org/10.1016/j.cjche.2026.08.023
+  authors: '**Wenle Xu**, Wei Hu, Yi Wang, Xi Zhang, Vijay Pandey, Tong Qiu'
+  abstract: >-
+    Patient-derived colon organoids serve as vital in vitro models for personalized medicine in ulcerative
+    colitis. However, extracting quantitative phenotypic metrics from time-lapse bright-field videos remains
+    a major challenge. Traditional manual analysis is labor-intensive, subjective, and incompatible with
+    high-throughput applications. While standard deep learning frameworks have been introduced to automate
+    this workflow, the complex morphology of polymorphic organoids often leads to shape distortions. Furthermore,
+    training these models typically requires massive pixel-level annotations to prevent non-convergence
+    and weak generalization under data-scarcity scenarios. To solve these compounding issues, we develop
+    a morphologically consistent and data-efficient instance segmentation framework designed for high-precision
+    organoid analysis. Our framework explicitly incorporates structured multi-dimensional physical priors
+    into a deep neural network to guarantee strict morphological consistency. Concurrently, to alleviate
+    annotation scarcity, a domain-specific weakly supervised pre-training strategy is introduced to leverage
+    open-source object detection datasets, significantly reducing the reliance on manual pixel-level masks.
+    Deployed on continuous 150-hour longitudinal video recordings, our automated pipeline successfully
+    tracks granular individual and population trajectories across three morphological indicators, effectively
+    quantifying drug efficacy and validating the potential of this paradigm for high-throughput pharmacological
+    screening.
+  image: ./images/organoid-screening-framework.webp
+  image_alt: Overview of the organoid instance segmentation and drug screening framework
+- date: '2026.06'
+  title: Hand-crafted Feature Fusion for Deep Learning-Based Instance Segmentation in Microfluidics
+  url: https://doi.org/10.69997/sct.107493
+  authors: '**Wenle Xu**, Lin Sheng, Qichen Shang, Mengqi Liu, Tong Qiu, Kai Wang, Guangsheng Luo'
+  abstract: >-
+    High-throughput analysis of microfluidic droplets and bubbles is essential for chemical engineering
+    but remains challenging due to the inherent loss of high-frequency details in standard deep learning
+    models. This study proposes a novel Hand-crafted Feature Fusion framework that explicitly integrates
+    physical priors, specifically Local Binary Patterns and Discrete Wavelet Transform, into a two-stage
+    instance segmentation network. We design an adaptive attention-based fusion module embedded within
+    both the Feature Pyramid Network and Region Proposal Network to synergize explicit texture cues with
+    implicit semantic features. Validated on a large-scale dataset comprising over 64000 instances, our
+    method achieves a test mAP of 0.808, significantly outperforming state-of-the-art architectures. Crucially,
+    the framework effectively resolves the detection bottleneck for minute targets and elevates the small-object
+    accuracy to 0.764, representing an improvement of nearly 20% over the baseline. This work demonstrates
+    that incorporating physical priors offers a superior strategy for precise scientific image analysis
+    compared to generic data-driven models.
+  image: ./images/escape36-feature-fusion.webp
+  image_alt: Hand-crafted feature fusion architecture for microfluidic instance segmentation
+- date: '2026.04'
+  title: Systematic Data Governance and Forecasting Research for Chemical Processes
+  url: https://doi.org/10.11949/0438-1157.20260277
+  authors: '**Wenle Xu**, Qiming Zhao, Chun Liu, Xinye Huang, Chu Qi, Tong Qiu'
+  abstract: >-
+    To address the challenges of strong nonlinearity, multivariable coupling, and high-frequency noise
+    inherent in complex chemical process data, this paper proposes a systematic data governance and forecasting
+    framework for key variables. The framework first establishes a standardized data governance mechanism,
+    utilizing a joint strategy of Median Absolute Deviation and K-Nearest Neighbors to precisely identify
+    local and global anomalies. Kalman filtering is then applied to achieve smooth denoising while preserving
+    dynamic process characteristics to the maximum extent. In the variable selection and feature reconstruction
+    stage, the study introduces correlation analysis, Convergent Cross Mapping for causal inference, and
+    Variance Inflation Factor analysis. These methods eliminate redundant features and identify key driving
+    variables from the dual dimensions of statistical association and process mechanisms. Simultaneously,
+    physics-based rule features are incorporated to significantly enhance the interpretability of the
+    model. Empirical research on pressure drop prediction for a cryogenic scrubber demonstrates that the
+    framework, integrated with the TimeXer model, exhibits superior performance. It achieves higher accuracy
+    and robustness, particularly in long-term forecasting tasks, providing a reliable technical paradigm
+    for intelligent monitoring and proactive control of chemical processes.
+  image: ./images/chemical-process-forecasting.webp
+  image_alt: Data governance and time-series forecasting framework for chemical processes
+- date: '2025.06'
+  title: 'MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation
+    and Training'
+  url: https://www.sciencedirect.com/science/article/pii/S1004954125002381
+  authors: '**Wenle Xu**, Lin Sheng, Tong Qiu, Kai Wang, Guangsheng Luo'
+  abstract: >-
+    Microdispersion technology is crucial for a variety of applications in both the chemical and biomedical
+    fields. The precise and rapid characterization of microdroplets and microbubbles is essential for
+    research as well as for optimizing and controlling industrial processes. Traditional methods often
+    rely on time-consuming manual analysis. Although some deep learning-based computer vision methods
+    have been proposed for automated identification and characterization, these approaches often rely
+    on supervised learning, which requires labeled data for model training. This dependency on labeled
+    data can be time-consuming and expensive, especially when working with large and complex datasets.
+    To address these challenges, we propose MicroFlowSAM, an innovative, motion-prompted, annotation-free,
+    and training-free instance segmentation approach. By utilizing motion of microdroplets and microbubbles
+    as prompts, our method directs large-scale vision models to perform accurate instance segmentation
+    without the need for annotated data or model training. This approach eliminates the need for human
+    intervention in data labeling and reduces computational costs, significantly streamlining the data
+    analysis process. We demonstrate the effectiveness of MicroFlowSAM across 12 diverse datasets, achieving
+    outstanding segmentation results that are competitive with traditional methods. This novel approach
+    not only accelerates the analysis process but also establishes a foundation for efficient process
+    control and optimization in microfluidic applications. MicroFlowSAM represents a breakthrough in reducing
+    the complexities and resource demands of instance segmentation, enabling faster insights and advancements
+    in the microdispersion field.
+  image: ./images/cjche-0.jpg
+  image_alt: MicroFlowSAM
+- date: '2025.06'
+  title: Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking
+    Process
+  url: https://doi.org/10.69997/sct.173697
+  authors: '**Wenle Xu**, Baohua Chen, Tong Qiu'
+  abstract: >-
+    Fluid catalytic cracking is a crucial process in the refining industry, capable of converting lower-quality
+    feedstocks into higher-value products. Due to the variability in feedstock properties and fluctuations
+    in product market prices, timely adjustment and optimization of the FCC unit are essential. In this
+    context, data-driven models have garnered increasing attention for their capacity to handle the complex,
+    nonlinear reactions involved in the FCC process. However, on account of the limited operating range
+    of the plants and the black-box nature of data-driven models, relying solely on these models for optimization
+    may lead to contradictory decisions in optimization processes. To address these challenges, we integrate
+    gradient information of product yields with respect to key variables derived from the mechanistic
+    model Petro-SIM, into the training process of data-driven models. To mitigate the high computational
+    demands of the Petro-SIM model, we propose the use of active learning methods for efficient sampling
+    and thereby constructing a surrogate model. The results demonstrate that the active learning approach
+    reduces the required sampling size by 25%. More importantly, the data-driven model trained with gradient
+    information improves the accuracy of trend direction prediction by 34.6%, significantly enhancing
+    its effectiveness in supporting the optimization process.
+  image: ./images/escape35.svg
+  image_alt: ESCAPE35
+- date: '2024.06'
+  title: An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation
+    and Multi-Object Tracking Algorithms
+  url: https://www.sciencedirect.com/science/article/pii/B9780443288241505019
+  authors: '**Wenle Xu**, Shuyuan Zhang, Kai Wang, Tong Qiu'
+  abstract: >-
+    Controlled coalescence of droplets is a crucial method of performing reactions and synthesises within
+    droplets. Among all methods employed for droplet characterization within microchannels, microscopic
+    imaging stands out for its capacity to capture ample information. However, the processing of images
+    and videos still predominantly relied on massive manual works, which falls short of meeting the demands
+    for high-throughput analysis. To address this problem, this paper proposes an efficient approach based
+    on instance segmentation and multi-object tracking algorithms to analyse the droplet coalescence videos
+    in microchannels. This approach initially segments droplets in microscopic images and consequently
+    associate the identical droplets and recognize the coalescence processes across consecutive frames.
+    Finally, further analysis of these data can yield critical statistics of the droplet coalescence process,
+    such as coalescence probability and coalescence time. This approach enables automated and efficient
+    analysis of videos to decipher the droplet coalescence process, thereby accelerating the discovery
+    and exploration of droplet coalescence patterns in microfluidics.
+  image: ./images/coalescence.png
+  image_alt: coalescence
+- date: '2026.08'
+  title: Microdispersion and Droplet Coalescence with Mass Transfer in Microcapillary Jetting Flow
+  url: https://doi.org/10.1021/acs.iecr.6c03051
+  authors: Qichen Shang, **Wenle Xu**, Yu Chang, Jian Deng, Tong Qiu, Guangsheng Luo
+  abstract: >-
+    Interphase mass transfer strongly influences liquid–liquid microdispersion and microdroplet coalescence,
+    yet its role in microcapillary jetting flow remains unclear. Herein, mass-transfer effects on microdispersion
+    and coalescence were systematically investigated using n-octane/benzoic acid/water and MIBK/phosphoric
+    acid/water systems. This work clarifies the different roles of mass transfer in flow-pattern transition,
+    microdispersion, and droplet coalescence. During breakup under laminar jet flow, characteristic sizes
+    and breakup hydrodynamics are mainly correlated with the solute-concentration-dependent interfacial
+    tension, σs. In contrast, interfacial concentration gradients can accumulate along the liquid jet
+    surface and be amplified in micrometer-scale drainage films, thereby delaying flow-pattern transition
+    and regulating droplet coalescence. Using σs as an effective parameter, semiempirical dimensionless
+    models were developed to predict key breakup parameters in laminar jet flow with good accuracy. These
+    results provide insight into mass-transfer effects in microcapillary jetting flow and offer guidance
+    for regulating microdispersion and droplet stability under mass-transfer conditions.
+  image: ./images/microcapillary-mass-transfer.webp
+  image_alt: Mass transfer effects on microdispersion and droplet coalescence in microcapillary jetting
+    flow
+- date: '2026.06'
+  title: Coalescence Behavior of Rising Monodisperse Microdroplets with Rear-end Collision
+  url: https://doi.org/10.1016/j.ces.2026.124497
+  authors: Qichen Shang, **Wenle Xu**, Yu Chang, Jian Deng, Tong Qiu, Guangsheng Luo
+  abstract: >-
+    The coalescence behavior of microdroplets affects the flow stability, transport and reaction performances,
+    as well as phase-separation efficiency of the microdroplet-based reactors and separators. However,
+    the coalescence dynamics of buoyancy-driven rising monodisperse microdroplets with rear-end collision
+    in unconfined space remain insufficiently understood, despite its significance for designing microchemical
+    systems based on microdroplet swarms. In this work, a string of monodisperse microdroplets generated
+    using the micro-capillary jetting technique is taken as the research object. A self-developed image
+    recognition system is employed to obtain high-resolution dynamic parameters. The results reveal that
+    the film-thinning rate increases approximately linearly with terminal velocity. The influence of physical
+    properties is manifested in their effects on the velocity distribution within the liquid film. Droplet
+    size will increase the film drainage time. A critical capillary number is proposed to characterize
+    the coalescence state of rising monodisperse microdroplets with rear-end collision, providing a basis
+    for optimizing microchemical systems by either promoting or suppressing coalescence.
+  image: ./images/rising-droplet-coalescence.webp
+  image_alt: Experimental setup and automated image identification of rising microdroplet coalescence
+- date: '2025.11'
+  title: Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels
+  url: https://www.sciencedirect.com/science/article/pii/S0009250925017555#f0010
+  authors: Lin Sheng, Junjie Wang, **Wenle Xu**, Jian Deng, Guangsheng Luo
+  abstract: >-
+    Increasing the throughput of the gas–liquid microchannel reactor via the numbering-up method is essential
+    for its commercial application; however, the existing strategy mainly focuses on the conventional
+    T-junction and also requires a strict fluid distributor design. Accordingly, for the high-performance
+    modified T-junction microchannel with a flexible interaction, we proposed a simple numbering-up method
+    between parallel microchannels. The results show that the two-phase flow pattern in parallel microchannels
+    differs based on the sequence of changes in the liquid phase, and a bi-stable flow pattern region
+    is observed for the first time in parallel microchannels, which is named the flow pattern transformation
+    hysteresis behavior. In addition, compared with the gas constant-volumetric-flow-rate mode, the gas
+    constant-pressure injection mode ensures the uniformity of bubble length and liquid slug length in
+    parallel microchannels. Therefore, a reliable gas–liquid microchannel numbering-up strategy based
+    on the microdevice startup mode of liquid filling and the gas injection mode of constant-pressure
+    was proposed. Finally, the applicability of the microchannel numbering-up strategy was verified via
+    the gas absorption in parallel microchannels. This work not only develops a simple numbering-up strategy
+    for the gas–liquid microchannel but also proposes a suitable operation procedure for the numbering-up
+    microdevice.
+- date: '2025.07'
+  title: Gas–liquid mass transfer enhancement by simply modifying a T-junction microchannel
+  url: https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70017
+  authors: Lin Sheng, **Wenle Xu**, Zhixuan Chen, Jian Deng, Tong Qiu, Guangsheng Luo
+  abstract: >-
+    Improving the gas–liquid mass transfer rate in microdevices is essential for enhancing chemical reaction
+    performance, but it has traditionally required high energy input or complex device fabrication. This
+    study reports superior gas–liquid mass transfer performance in a newly designed T-junction microchannel
+    with a simple structure. Compared with the mass transfer contribution of approximately 30% in a conventional
+    T-junction microchannel, the contribution of the bubble generation stage in the modified device ranges
+    from 50%–80%. The parameters of bubble generation frequency and liquid slug length are studied to
+    identify the mechanism underlying the enhanced performance. Importantly, through a self-developed
+    image recognition system with high temporal and spatial resolution, this study reveals that the liquid-side
+    mass transfer coefficient not only depends on operation parameters but also relies on bubble residence
+    time. Finally, considering channel length and mass transfer time, a new semi-empirical model is developed.
+  image: ./images/aiche202507.jpg
+  image_alt: Gas–liquid mass transfer in the modified T-junction microchannel
+- date: '2024.11'
+  title: Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic
+    Cracking Process
+  url: https://www.mdpi.com/2227-9717/12/11/2474
+  authors: Haoran Li, Qiming Zhao, Ruqiang Wang, **Wenle Xu**, Tong Qiu
+  abstract: >-
+    Fluid Catalytic Cracking (FCC) is one of the most important conversion processes in oil refineries,
+    widely used to convert high-boiling, high-molecular-weight hydrocarbon components from crude oil into
+    more valuable products like gasoline and diesel. Advanced simulation and optimization technologies
+    are critical for improving the operational efficiency and economic performance of the FCC process.
+    First-principles-based simulators rely on parameter estimation and are computationally intensive,
+    making them unsuitable for online optimization. In recent years, with the development of deep learning,
+    data-driven models have made significant progress in FCC modeling. However, due to their black-box
+    nature and difficulty with extrapolation, they are rarely used for optimization. To bridge this gap,
+    we propose an integrated framework that combines hybrid modeling and surrogate model-based optimization.
+    This approach combines plant and simulation data to train a multi-task learning prediction model,
+    which then serves as a surrogate for operational optimization. Validated on a large-scale FCC unit
+    in southern China, the model predicts product yields with an error margin of under 4.84% for all products.
+    Following optimization, yields of LNG, gasoline, and diesel rose by an average of 0.10 wt%, 1.58 wt%,
+    and 1.05 wt%, respectively, resulting in a 3.67% increase in product revenues. This highlights the
+    substantial potential of this framework for industrial applications.
+  image: ./images/processes-12-02474-g001.png
+  image_alt: FCC
