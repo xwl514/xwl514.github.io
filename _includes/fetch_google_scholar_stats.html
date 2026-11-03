@@ -1,19 +1,45 @@
 <script>
     $(document).ready(function () {
+        var totalElement = document.getElementById('total_cit');
+        var citationElements = document.getElementsByClassName('show_paper_citations');
+        if (!totalElement && !citationElements.length) return;
+
+        var rawUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json';
+        var cdnUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json';
         {% if site.google_scholar_stats_use_cdn %}
-        var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@'
+        var urls = [cdnUrl, rawUrl];
         {% else %}
-        var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
+        var urls = [rawUrl, cdnUrl];
         {% endif %}
-        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
-            var totalCitation = data['citedby']
-            document.getElementById('total_cit').innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName('show_paper_citations')
-            Array.prototype.forEach.call(citationEles, element => {
-                var paperId = element.getAttribute('data')
-                var numCitations = data['publications'][paperId]['num_citations']
-                element.innerHTML = '| Citations: ' + numCitations;
-            });
-        });
-    })
+
+        function isCount(value) {
+            return typeof value === 'number' && isFinite(value) && value >= 0 && Math.floor(value) === value;
+        }
+
+        function loadStats(index) {
+            $.ajax({url: urls[index], dataType: 'json', timeout: 10000})
+                .done(function (data) {
+                    if (!data || typeof data.publications !== 'object' || !data.publications) {
+                        retry();
+                        return;
+                    }
+                    if (totalElement && isCount(data.citedby)) {
+                        totalElement.textContent = data.citedby;
+                    }
+                    Array.prototype.forEach.call(citationElements, function (element) {
+                        var paper = data.publications[element.getAttribute('data')];
+                        if (paper && isCount(paper.num_citations)) {
+                            element.textContent = '| Citations: ' + paper.num_citations;
+                        }
+                    });
+                })
+                .fail(retry);
+
+            function retry() {
+                if (index + 1 < urls.length) loadStats(index + 1);
+                else console.warn('Google Scholar statistics could not be loaded.');
+            }
+        }
+        loadStats(0);
+    });
 </script>

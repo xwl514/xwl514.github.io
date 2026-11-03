@@ -1,53 +1,65 @@
-# name: Get Citation Data
+name: Get Citation Data
 
-# on:
-#   page_build:
-#   schedule:
-#     - cron: '0 12 * * *' # 每天中午12点运行
-#   workflow_dispatch: # 允许手动触发
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'google_scholar_crawler/**'
+      - '_config.yml'
+      - '.github/workflows/google_scholar_crawler.yaml'
+  schedule:
+    - cron: '0 12 * * *' # Daily at 20:00 Asia/Shanghai.
+  workflow_dispatch:
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-22.04 # 修改为指定的稳定版本
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
+permissions:
+  contents: write
 
-#       - name: Set up Python
-#         uses: actions/setup-python@v5
-#         with:
-#           python-version: '3.10' # 或者指定一个明确的版本，例如 '3.9', '3.10' (Ubuntu 22.04 默认 Python 3.10)
-#           cache: 'pip'
+concurrency:
+  group: google-scholar-stats
+  cancel-in-progress: false
 
-#       - name: Install system dependencies (if still needed)
-#         run: |
-#           sudo apt-get update
-#           sudo apt-get install -y python3-setuptools
-#         # 注意: actions/setup-python 和 pip 可能已经处理了setuptools的需求。
-#         # 你可以尝试移除此步骤，看看是否依然能成功安装 requirements.txt 中的包。
-
-#       - name: Install Python dependencies
-#         run: |
-#           ls -a
-#           cd ./google_scholar_crawler
-#           pip3 install -r requirements.txt
-
-#       - name: Run script
-#         run: |
-#           ls -a
-#           cd google_scholar_crawler
-#           python3 main.py
-#           cd ./results
-#           git init
-#           git config --local user.email "xwl514@outlook.com"
-#           git config --local user.name "xwl514" # 或者使用 ${{ github.actor }}
-#           git remote add origin "https://_:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-#           git add *.json
-#           if git diff-index --quiet HEAD --; then
-#             echo "No changes to commit."
-#           else
-#             git commit -m "Updated Citation Data"
-#             git push origin HEAD:google-scholar-stats --force
-#           fi
-#         env:
-#           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: google_scholar_crawler/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r google_scholar_crawler/requirements.txt
+      - name: Test crawler
+        run: |
+          python -m unittest discover -s google_scholar_crawler -p 'test_*.py'
+          node google_scholar_crawler/test_frontend.cjs
+      - name: Fetch citation data
+        run: python google_scholar_crawler/main.py
+        env:
+          GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          HTTPS_PROXY: ${{ secrets.GOOGLE_SCHOLAR_PROXY }}
+      - name: Publish complete results
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin google-scholar-stats; then
+            git fetch origin google-scholar-stats
+            git worktree add --detach "$RUNNER_TEMP/scholar-stats" FETCH_HEAD
+          else
+            status=$?
+            if [ "$status" -ne 2 ]; then exit "$status"; fi
+            git worktree add --detach "$RUNNER_TEMP/scholar-stats" HEAD
+            git -C "$RUNNER_TEMP/scholar-stats" checkout --orphan google-scholar-stats
+            git -C "$RUNNER_TEMP/scholar-stats" rm -rf .
+          fi
+          cp google_scholar_crawler/results/gs_data*.json "$RUNNER_TEMP/scholar-stats/"
+          cd "$RUNNER_TEMP/scholar-stats"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add gs_data.json gs_data_shieldsio.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update Google Scholar citation data'
+          git push origin HEAD:google-scholar-stats

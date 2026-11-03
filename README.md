@@ -37,8 +37,10 @@ AcadHomepage
 1. Fork本仓库到 `USERNAME/USERNAME.github.io`，其中 `USERNAME`是你的github用户名。
 2. 配置谷歌学术引用爬虫：
    1. 在你的谷歌学术引用页面的url里找到你的谷歌学术ID：例如，在url https://scholar.google.com/citations?user=SCHOLAR_ID 中，`SCHOLAR_ID`部分即为你的谷歌学术ID。
-   2. 在github本仓库页面的 `Settings -> Secrets -> Actions -> New repository secret`中，添加 `GOOGLE_SCHOLAR_ID`变量：`name=GOOGLE_SCHOLAR_ID`、`value=SCHOLAR_ID`。
-   3. 在github本仓库页面的 `Action`中，点击*"I understand my workflows, go ahead and enable them"*启用workflows by clicking *"。本action将会谷歌学术引用的统计量数据 `gs_data.json`到本仓库的 `google-scholar-stats`分支中。每次修改main分支的内容会触发该action。本action也会在每天08:00 UTC定时触发。
+   2. 爬虫默认读取 `_config.yml` 中的 `author.googlescholar`。也可在仓库 `Settings -> Secrets and variables -> Actions` 中添加 `GOOGLE_SCHOLAR_ID` Secret 覆盖此设置（支持 ID 或完整个人主页 URL）。
+   3. 在 Actions 中启用 `Get Citation Data`，可用 `Run workflow` 手动运行。工作流每天北京时间 20:00（12:00 UTC）运行，在 `master`/`main` 上修改爬虫、配置或工作流也会触发。成功后将统计和徽章 JSON 更新到 `google-scholar-stats` 分支；失败会报错并保留上次发布的数据。
+   4. Google Scholar 可能对直连请求返回 403、429 或 HTTP 200 的机器人验证页。可添加 `SERPAPI_API_KEY` Secret，切换到 [SerpApi Google Scholar Author API](https://serpapi.com/google-scholar-author-api)（需自行提供密钥及可用额度）；或添加 `GOOGLE_SCHOLAR_PROXY` Secret 配置可访问 Scholar 的 HTTP/HTTPS 代理。未配置密钥时使用直连，支持读取本地 `HTTPS_PROXY`。不要把密钥或代理凭据提交到仓库。
+   5. 本地运行：`python -m pip install -r google_scholar_crawler/requirements.txt`，然后执行 `python google_scholar_crawler/main.py`。输出位于 `google_scholar_crawler/results/`。验证命令：`python -m unittest discover -s google_scholar_crawler -p 'test_*.py'` 和 `node google_scholar_crawler/test_frontend.cjs`。
 3. 使用 [favicon-generator](https://redketchup.io/favicon-generator)生成favicon（网页icon文件），并下载所有文件到 `REPO/images`。
 4. 修改主页配置文件[_config.yml](../_config.yml):
    1. `title`: 主页标题

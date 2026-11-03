@@ -35,8 +35,10 @@ Some examples:
 1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
 1. Configure the google scholar citation crawler:
     1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
+    1. The crawler reads `author.googlescholar` from `_config.yml` by default. Optionally override it with a `GOOGLE_SCHOLAR_ID` repository Actions secret (an ID or full profile URL).
+    1. Enable `Get Citation Data` in Actions and use `Run workflow` for a manual update. It runs daily at 12:00 UTC (20:00 Asia/Shanghai), and when crawler, configuration or workflow files change on `master`/`main`. Complete statistics and badge JSON are published to `google-scholar-stats`; failed updates leave published data unchanged.
+    1. If direct access returns 403, 429 or a verification page, set the `SERPAPI_API_KEY` Actions secret to use the [SerpApi Google Scholar Author API](https://serpapi.com/google-scholar-author-api), using your own key and quota. Alternatively set the `GOOGLE_SCHOLAR_PROXY` secret to an HTTP/HTTPS proxy with Scholar access. Local runs honor `HTTPS_PROXY`. Keep credentials out of the repository.
+    1. Run locally with `python -m pip install -r google_scholar_crawler/requirements.txt` followed by `python google_scholar_crawler/main.py`. Results are written to `google_scholar_crawler/results/`. Run checks with `python -m unittest discover -s google_scholar_crawler -p 'test_*.py'` and `node google_scholar_crawler/test_frontend.cjs`.
 1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
 1. Modify the configuration of your homepage `_config.yml`:
     1. `title`: the title of your homepage
