@@ -1,86 +1,99 @@
 {
-    "container_type": "Author",
-    "filled": [
-        "basics",
-        "publications",
-        "indices",
-        "counts"
-    ],
-    "scholar_id": "2Ruek5kAAAAJ",
-    "source": "AUTHOR_PROFILE_PAGE",
-    "name": "Wenle Xu",
-    "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=2Ruek5kAAAAJ&citpid=1",
-    "affiliation": "Department of Chemical Engineering, Tsinghua University, Beijing",
-    "organization": 15442380624744264287,
-    "interests": [
-        "Process System Engineering"
-    ],
-    "email_domain": "@mails.tsinghua.edu.cn",
-    "homepage": "https://xwl514.github.io/",
-    "publications": {
-        "2Ruek5kAAAAJ:d1gkVwhDpl0C": {
-            "container_type": "Publication",
-            "source": "AUTHOR_PUBLICATION_ENTRY",
-            "bib": {
-                "title": "Integrated Hybrid Modelling and Surrogate Model-Based Operation Optimization of Fluid Catalytic Cracking Process",
-                "pub_year": "2024"
-            },
-            "filled": false,
-            "author_pub_id": "2Ruek5kAAAAJ:d1gkVwhDpl0C",
-            "num_citations": 2
-        },
-        "2Ruek5kAAAAJ:u-x6o8ySG0sC": {
-            "container_type": "Publication",
-            "source": "AUTHOR_PUBLICATION_ENTRY",
-            "bib": {
-                "title": "An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms",
-                "pub_year": "2024"
-            },
-            "filled": false,
-            "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC",
-            "num_citations": 1
-        },
-        "2Ruek5kAAAAJ:u-x6o8ySG0sC_1": {
-            "container_type": "Publication",
-            "source": "AUTHOR_PUBLICATION_ENTRY",
-            "bib": {
-                "title": "MicroFlowSAM: A Motion-Prompted Instance Segmentation Approach in Microfluidics with Zero Annotation and Training",
-                "pub_year": "2025"
-            },
-            "filled": false,
-            "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC_1",
-            "num_citations": 0
-        },
-        "2Ruek5kAAAAJ:u-x6o8ySG0sC_2": {
-            "container_type": "Publication",
-            "source": "AUTHOR_PUBLICATION_ENTRY",
-            "bib": {
-                "title": "Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process",
-                "pub_year": "2025"
-            },
-            "filled": false,
-            "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC_2",
-            "num_citations": 0
-        },
-        "2Ruek5kAAAAJ:u-x6o8ySG0sC_3": {
-            "container_type": "Publication",
-            "source": "AUTHOR_PUBLICATION_ENTRY",
-            "bib": {
-                "title": "Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels",
-                "pub_year": "2025"
-            },
-            "filled": false,
-            "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC_3",
-            "num_citations": 0
-        }
-        
+  "scholar_id": "2Ruek5kAAAAJ",
+  "name": "Wenle Xu",
+  "source": "google_scholar",
+  "publications": {
+    "2Ruek5kAAAAJ:qjMakFHDy7sC": {
+      "author_pub_id": "2Ruek5kAAAAJ:qjMakFHDy7sC",
+      "bib": {
+        "title": "Gas–liquid mass transfer enhancement by simply modifying a T‐junction microchannel",
+        "pub_year": "2025"
+      },
+      "num_citations": 9
     },
-    "hindex": 1,
-    "hindex5y": 1,
-    "i10index": 0,
-    "i10index5y": 0,
-    "cites_per_year": {
-        "2025": 3
+    "2Ruek5kAAAAJ:d1gkVwhDpl0C": {
+      "author_pub_id": "2Ruek5kAAAAJ:d1gkVwhDpl0C",
+      "bib": {
+        "title": "Integrated hybrid modelling and surrogate model-based operation optimization of fluid catalytic cracking process",
+        "pub_year": "2024"
+      },
+      "num_citations": 9
     },
-    "updated": "2025-10-06 12:26:04.040738"
+    "2Ruek5kAAAAJ:UeHWp8X0CEIC": {
+      "author_pub_id": "2Ruek5kAAAAJ:UeHWp8X0CEIC",
+      "bib": {
+        "title": "Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels",
+        "pub_year": "2025"
+      },
+      "num_citations": 6
+    },
+    "2Ruek5kAAAAJ:u-x6o8ySG0sC": {
+      "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC",
+      "bib": {
+        "title": "An Efficient Approach for Droplet Coalescence Videos Processing based on Instance Segmentation and Multi-Object Tracking Algorithms",
+        "pub_year": "2024"
+      },
+      "num_citations": 2
+    },
+    "2Ruek5kAAAAJ:IjCSPb-OGe4C": {
+      "author_pub_id": "2Ruek5kAAAAJ:IjCSPb-OGe4C",
+      "bib": {
+        "title": "Coalescence behavior of rising monodisperse microdroplets with rear-end collision",
+        "pub_year": "2026"
+      },
+      "num_citations": 1
+    },
+    "2Ruek5kAAAAJ:9yKSN-GCB0IC": {
+      "author_pub_id": "2Ruek5kAAAAJ:9yKSN-GCB0IC",
+      "bib": {
+        "title": "MicroFlowSAM: A motion-prompted instance segmentation approach in microfluidics with zero annotation and training",
+        "pub_year": "2025"
+      },
+      "num_citations": 1
+    },
+    "2Ruek5kAAAAJ:Tyk-4Ss8FVUC": {
+      "author_pub_id": "2Ruek5kAAAAJ:Tyk-4Ss8FVUC",
+      "bib": {
+        "title": "Empowering organoid-based drug screening: A morphologically-consistent and data-efficient instance segmentation framework",
+        "pub_year": "2026"
+      },
+      "num_citations": 0
+    },
+    "2Ruek5kAAAAJ:zYLM7Y9cAGgC": {
+      "author_pub_id": "2Ruek5kAAAAJ:zYLM7Y9cAGgC",
+      "bib": {
+        "title": "Microdispersion and Droplet Coalescence with Mass Transfer in Microcapillary Jetting Flow",
+        "pub_year": "2026"
+      },
+      "num_citations": 0
+    },
+    "2Ruek5kAAAAJ:Y0pCki6q_DkC": {
+      "author_pub_id": "2Ruek5kAAAAJ:Y0pCki6q_DkC",
+      "bib": {
+        "title": "Hand-crafted Feature Fusion for Deep Learning-Based Instance Segmentation in Microfluidics",
+        "pub_year": ""
+      },
+      "num_citations": 0
+    },
+    "2Ruek5kAAAAJ:2osOgNQ5qMEC": {
+      "author_pub_id": "2Ruek5kAAAAJ:2osOgNQ5qMEC",
+      "bib": {
+        "title": "Integration of Yield Gradient Information in Numerical Modeling of the Fluid Catalytic Cracking Process",
+        "pub_year": ""
+      },
+      "num_citations": 0
+    }
+  },
+  "cites_per_year": {
+    "2025": 9,
+    "2026": 19
+  },
+  "citedby": 28,
+  "citedby5y": 28,
+  "hindex": 3,
+  "hindex5y": 3,
+  "i10index": 0,
+  "i10index5y": 0,
+  "affiliation": "Department of Chemical Engineering, Tsinghua University, Beijing",
+  "updated": "2026-11-03T07:11:23.023105+00:00"
 }
