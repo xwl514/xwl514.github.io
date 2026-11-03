@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from subscription_proxy import SubscriptionError, fetch_via_subscription
+
 ROOT = Path(__file__).resolve().parent
 PAGE_SIZE = 100
 MAX_PAGES = 100
@@ -187,18 +189,22 @@ def write_results(author, output_dir):
 def main():
     try:
         author_id = scholar_id()
-        with requests.Session() as session:
-            retry = Retry(total=2, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504],
-                          respect_retry_after_header=False)
-            session.mount("https://", HTTPAdapter(max_retries=retry))
-            session.headers.update({"User-Agent": "Mozilla/5.0", "Accept-Language": "en-US,en;q=0.9"})
-            api_key = os.getenv("SERPAPI_API_KEY", "").strip()
-            author = fetch_serpapi(session, author_id, api_key) if api_key else fetch_direct(session, author_id)
+        subscription = os.getenv("CLASH_SUBSCRIPTION_URL", "").strip()
+        if subscription:
+            author = fetch_via_subscription(subscription, lambda session: fetch_direct(session, author_id))
+        else:
+            with requests.Session() as session:
+                retry = Retry(total=2, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504],
+                              respect_retry_after_header=False)
+                session.mount("https://", HTTPAdapter(max_retries=retry))
+                session.headers.update({"User-Agent": "Mozilla/5.0", "Accept-Language": "en-US,en;q=0.9"})
+                api_key = os.getenv("SERPAPI_API_KEY", "").strip()
+                author = fetch_serpapi(session, author_id, api_key) if api_key else fetch_direct(session, author_id)
         write_results(author, ROOT / "results")
         print(f"Updated {author['name']}: {author['citedby']} citations, "
               f"{len(author['publications'])} publications ({author['source']}).")
         return 0
-    except (FetchError, OSError, yaml.YAMLError) as error:
+    except (FetchError, SubscriptionError, OSError, yaml.YAMLError) as error:
         print(f"Scholar update failed; previous statistics are unchanged: {error}", file=sys.stderr)
         return 1
 

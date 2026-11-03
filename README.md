@@ -40,7 +40,8 @@ AcadHomepage
    2. 爬虫默认读取 `_config.yml` 中的 `author.googlescholar`。也可在仓库 `Settings -> Secrets and variables -> Actions` 中添加 `GOOGLE_SCHOLAR_ID` Secret 覆盖此设置（支持 ID 或完整个人主页 URL）。
    3. 在 Actions 中启用 `Get Citation Data`，可用 `Run workflow` 手动运行。工作流每天北京时间 20:00（12:00 UTC）运行，在 `master`/`main` 上修改爬虫、配置或工作流也会触发。成功后将统计和徽章 JSON 更新到 `google-scholar-stats` 分支；失败会报错并保留上次发布的数据。
    4. Google Scholar 可能对直连请求返回 403、429 或 HTTP 200 的机器人验证页。可添加 `SERPAPI_API_KEY` Secret，切换到 [SerpApi Google Scholar Author API](https://serpapi.com/google-scholar-author-api)（需自行提供密钥及可用额度）；或添加 `GOOGLE_SCHOLAR_PROXY` Secret 配置可访问 Scholar 的 HTTP/HTTPS 代理。未配置密钥时使用直连，支持读取本地 `HTTPS_PROXY`。不要把密钥或代理凭据提交到仓库。
-   5. 本地运行：`python -m pip install -r google_scholar_crawler/requirements.txt`，然后执行 `python google_scholar_crawler/main.py`。输出位于 `google_scholar_crawler/results/`。验证命令：`python -m unittest discover -s google_scholar_crawler -p 'test_*.py'` 和 `node google_scholar_crawler/test_frontend.cjs`。
+   5. 使用 Clash 订阅时，在仓库 Actions Secrets 中添加 `CLASH_SUBSCRIPTION_URL`，值为完整订阅地址。当前支持订阅中的 HTTP/HTTPS 和 SOCKS5 节点，无需运行 Clash；优先使用订阅，最多尝试 5 个节点。可选的 `GOOGLE_SCHOLAR_PROXY_NODE` Secret 可指定订阅中的节点名称。订阅及节点凭据只在进程内存中使用，不落盘、不写入日志或构建产物。不要把订阅地址写进工作流、仓库变量或代码。
+   6. 本地运行：`python -m pip install -r google_scholar_crawler/requirements.txt`，然后执行 `python google_scholar_crawler/main.py`。输出位于 `google_scholar_crawler/results/`。验证命令：`python -m unittest discover -s google_scholar_crawler -p 'test_*.py'` 和 `node google_scholar_crawler/test_frontend.cjs`。
 3. 使用 [favicon-generator](https://redketchup.io/favicon-generator)生成favicon（网页icon文件），并下载所有文件到 `REPO/images`。
 4. 修改主页配置文件[_config.yml](../_config.yml):
    1. `title`: 主页标题
