@@ -6,7 +6,7 @@ on:
     paths:
       - 'google_scholar_crawler/**'
       - '_config.yml'
-      - '.github/workflows/google_scholar_crawler.yaml'
+      - '.github/workflows/google-scholar-stats.yml'
   schedule:
     - cron: '0 12 * * *' # Daily at 20:00 Asia/Shanghai.
   workflow_dispatch:
