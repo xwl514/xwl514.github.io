@@ -191,6 +191,7 @@ def main():
         author_id = scholar_id()
         subscription = os.getenv("CLASH_SUBSCRIPTION_URL", "").strip()
         if subscription:
+            print("Fetching Scholar using the private subscription proxy.")
             author = fetch_via_subscription(subscription, lambda session: fetch_direct(session, author_id))
         else:
             with requests.Session() as session:
