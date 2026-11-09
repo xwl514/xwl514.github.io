@@ -5,6 +5,8 @@ from urllib.parse import quote, urlsplit
 
 import requests
 import yaml
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 MAX_PROXY_ATTEMPTS = 5
 
@@ -18,15 +20,30 @@ def load_subscription(url):
         raise SubscriptionError("CLASH_SUBSCRIPTION_URL must use HTTPS.")
     try:
         with requests.Session() as session:
+            retry = Retry(total=2, backoff_factor=1, allowed_methods={"GET"},
+                          status_forcelist=[429, 500, 502, 503, 504],
+                          respect_retry_after_header=False, raise_on_status=False)
+            session.mount("https://", HTTPAdapter(max_retries=retry))
             response = session.get(url, timeout=(10, 30))
             response.raise_for_status()
             document = yaml.safe_load(response.text)
         if not isinstance(document, dict) or not isinstance(document.get("proxies"), list):
             raise ValueError("Missing proxies list")
         return document["proxies"]
-    except (requests.RequestException, yaml.YAMLError, ValueError):
-        # Exception messages may contain the subscription URL or node credentials.
-        raise SubscriptionError("Could not load the private Clash subscription; details withheld.") from None
+    except requests.HTTPError as error:
+        status = error.response.status_code if error.response is not None else "unknown"
+        # Report only the status; URLs, response bodies and exceptions may contain credentials.
+        raise SubscriptionError(
+            f"Could not load the private Clash subscription (HTTP {status}); credentials withheld."
+        ) from None
+    except requests.RequestException:
+        raise SubscriptionError(
+            "Could not load the private Clash subscription after retries (network error); credentials withheld."
+        ) from None
+    except (yaml.YAMLError, ValueError):
+        raise SubscriptionError(
+            "The private subscription did not return valid Clash YAML with a proxies list; contents withheld."
+        ) from None
 
 
 def proxy_url(node):

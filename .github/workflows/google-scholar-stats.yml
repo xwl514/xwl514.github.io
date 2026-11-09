@@ -8,7 +8,7 @@ on:
       - '_config.yml'
       - '.github/workflows/google-scholar-stats.yml'
   schedule:
-    - cron: '0 12 * * *' # Daily at 20:00 Asia/Shanghai.
+    - cron: '0 12 1 * *' # Monthly on day 1 at 20:00 Asia/Shanghai.
   workflow_dispatch:
 
 permissions:

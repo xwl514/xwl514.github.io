@@ -49,6 +49,21 @@ class SubscriptionProxyTests(unittest.TestCase):
             with self.assertRaises(proxy.SubscriptionError):
                 proxy.load_subscription("https://example/subscription")
 
+    def test_subscription_http_error_reports_status_without_credentials(self):
+        private_url = "https://private.example/subscription/secret-token"
+        for status in [403, 429, 503]:
+            response = requests.Response()
+            response.status_code = status
+            response.url = private_url
+            response._content = b"private-node-password"
+            with self.subTest(status=status), patch.object(proxy.requests, "Session") as factory:
+                factory.return_value.__enter__.return_value.get.return_value = response
+                with self.assertRaises(proxy.SubscriptionError) as caught:
+                    proxy.load_subscription(private_url)
+            self.assertIn(f"HTTP {status}", str(caught.exception))
+            self.assertNotIn(private_url, str(caught.exception))
+            self.assertNotIn("private-node-password", str(caught.exception))
+
     def test_failed_proxy_then_success_without_logging_credentials(self):
         nodes = [{"name": "private-node", "type": "http", "server": "proxy.example",
                   "port": port, "username": "private-user", "password": "private-password"}
