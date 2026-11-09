@@ -25,7 +25,7 @@
         "title": "Numbering-up and hysteresis behavior of the parallel gas–liquid microchannels",
         "pub_year": "2025"
       },
-      "num_citations": 6
+      "num_citations": 7
     },
     "2Ruek5kAAAAJ:u-x6o8ySG0sC": {
       "author_pub_id": "2Ruek5kAAAAJ:u-x6o8ySG0sC",
@@ -86,14 +86,14 @@
   },
   "cites_per_year": {
     "2025": 9,
-    "2026": 19
+    "2026": 20
   },
-  "citedby": 28,
-  "citedby5y": 28,
+  "citedby": 29,
+  "citedby5y": 29,
   "hindex": 3,
   "hindex5y": 3,
   "i10index": 0,
   "i10index5y": 0,
   "affiliation": "Department of Chemical Engineering, Tsinghua University, Beijing",
-  "updated": "2026-11-06T18:35:25.332406+00:00"
+  "updated": "2026-11-09T08:35:05.128372+00:00"
 }
