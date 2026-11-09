@@ -37,6 +37,7 @@ jobs:
           node google_scholar_crawler/test_frontend.cjs
       - name: Fetch citation data
         run: python google_scholar_crawler/main.py
+        # Each new run reads the current repository secrets after subscription rotation.
         env:
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
           CLASH_SUBSCRIPTION_URL: ${{ secrets.CLASH_SUBSCRIPTION_URL }}
